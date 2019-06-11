@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body id="background">
   <div class="container">
 
     <div id="quote-box">
@@ -36,7 +36,9 @@
       <p class="source">Patrick McKenzie<span class="citation">Twitter</span><span class="year">2016</span></p>
     </div>
 
-    <button id="loadQuote">Show another quote</button>
+    <button id="loadQuote" onclick="printQuote()" onclick="generateImg();">Show another
+      <!-- <button id="loadQuote" onclick="printQuote()">Show another -->
+      quote</button>
 
   </div>
   <script src="js/script.js"></script>

@@ -52,4 +52,36 @@ const quotes = [
     image: "http://www.chrflagship.uwc.ac.za/wp-content/uploads/2018/02/MalcomX3.jpg"
   }
 ];
-console.log(quotes);
+
+let getRandomQuote = () => {
+  const randomNum = Math.floor(Math.random() * quotes.length);
+  let randomQuote = quotes[randomNum];
+  return randomQuote;
+
+}
+
+
+var imageEvent = document.querySelector("#loadQuote");
+var background = document.querySelector('body');
+let generateImg = () => {
+  var bgImg = getRandomQuote().image;
+  document.body.style.backgroundImage = "url(bgImg)";
+  console.log(bgImg);
+  // return bgImg.image;
+}
+imageEvent.addEventListener('click', generateImg, false);
+
+var printQuote = () => {
+  const random = getRandomQuote();
+  let printMe = '';
+  printMe += '<p class="quote">' +
+    random.quote + '</p>' + '<p class="source">' +
+    random.source + '<span class="citation">' +
+    random.citation + '</span>';
+  if (random.year) {
+    printMe += '<span class="year">' + random.year + '</span>';
+  } + '</p>';
+  document.getElementById('quote-box').innerHTML = printMe;
+}
+
+

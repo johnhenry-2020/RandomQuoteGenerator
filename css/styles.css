@@ -4,18 +4,20 @@
  */
 
 body {
-  background-color: #36b55c;
+  background-color: rgba(90, 42,	22,.45);
   color: white;
   font-family: 'Playfair Display', serif;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 #quote-box {
-  position: absolute;
-  top: 20%;
-  left: 10%;
-  right: 10%;
-  width: 80%;
-  line-height: .5;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    line-height: .5;
 }
 
 .quote {
@@ -81,7 +83,7 @@ body {
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #36b55c;
+  background-color: #8b4513;
   padding: 15px 0;
   transition: .5s ;
 }
