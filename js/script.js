@@ -38,7 +38,7 @@ const quotes = [
     citation: "W.E.B. Du Bois",
     source: "The Souls of Black Folk",
     year: 1903,
-    image: "./media/web-dubois.jpeg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/1/12/WEB_DuBois_1918.jpg",
     id: 3
   },
 
