@@ -53,25 +53,18 @@ const quotes = [
   }
 ];
 
-let getRandomQuote = () => {
+const getRandomQuote = () => {
   const randomNum = Math.floor(Math.random() * quotes.length);
-  let randomQuote = quotes[randomNum];
+  const randomQuote = quotes[randomNum];
   return randomQuote;
-
 }
 
 
-var imageEvent = document.querySelector("#loadQuote");
-var background = document.querySelector('body');
-let generateImg = () => {
-  var bgImg = getRandomQuote().image;
-  document.body.style.backgroundImage = "url(bgImg)";
-  console.log(bgImg);
-  // return bgImg.image;
-}
-imageEvent.addEventListener('click', generateImg, false);
+const imageEvent = document.querySelector("#loadQuote");
+const background = document.querySelector('#background');
 
-var printQuote = () => {
+
+const printQuote = () => {
   const random = getRandomQuote();
   let printMe = '';
   printMe += '<p class="quote">' +
@@ -82,6 +75,16 @@ var printQuote = () => {
     printMe += '<span class="year">' + random.year + '</span>';
   } + '</p>';
   document.getElementById('quote-box').innerHTML = printMe;
+  background.style.backgroundImage = "url(" + random.image + ")";
 }
 
 
+// string interpelation
+//  '<p class="quote">' +
+//   random.quote + '</p>' + '<p class="source">' +
+//   random.source + '<span class="citation">' +
+//   random.citation + '</p>'
+
+
+// string literals
+// `sentence ${variable}`
