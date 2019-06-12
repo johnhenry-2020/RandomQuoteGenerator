@@ -119,7 +119,7 @@ const printQuote = () => {
   background.style.backgroundImage = "url(" + random.image + ")";
 }
 
-setInterval(function () { printQuote() }, 5000);
+setInterval(function () { printQuote() }, 15000);
 
 // NOTE:
 // Future task(s):
