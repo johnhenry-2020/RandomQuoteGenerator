@@ -1,18 +1,9 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project 1 - Javascript Full Stack Tech Degree </title>
-</head>
-
-<body>
-
-</body>
-
-</html> -->
+<!-- =================================================== *
+Project: Random Quote Generator (HTML - LAYOUT/STRUCTURE)
+Author: Jonathan J. Jolivette
+Created: 6.12.19
+Version: 1.1
+* =================================================== -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,8 +18,8 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body id="background">
-  <div class="container">
+<body class="background">
+  <div id="container">
 
     <div id="quote-box">
       <p class="quote">Every great developer you know got there by solving problems they were unqualified to solve until
@@ -36,12 +27,18 @@
       <p class="source">Patrick McKenzie<span class="citation">Twitter</span><span class="year">2016</span></p>
     </div>
 
-    <button id="loadQuote" onclick="printQuote()" onclick="generateImg();">Show another
-      <!-- <button id="loadQuote" onclick="printQuote()">Show another -->
-      quote</button>
+    <button id="loadQuote" onclick="printQuote()">Show another quote</button>
 
   </div>
   <script src="js/script.js"></script>
 </body>
 
 </html>
+
+
+<!-- NOTE:
+Future task(s):
+• (accessiblity feature with a toggle option) audio playback for each quote
+• addition of header and footer with links to personal repo/linkedin/each scholar's background info for further
+reading
+• transition comments from code to readme -->

@@ -1,15 +1,22 @@
-/**
- * Treehouse FSJS Techdegree
- * Random Quote Generator - CSS
- */
+/* =================================================== *
+Project: Random Quote Generator (CSS-STYLING)
+Author: Jonathan J. Jolivette
+Created: 6.12.19
+Version: 1.1
+* =================================================== */
 
 body {
   background-color: rgba(90, 42,	22,.45);
+  background-repeat: no-repeat;
   color: white;
   font-family: 'Playfair Display', serif;
   background-size: cover;
   background-blend-mode: overlay;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
+
 
 #quote-box {
     position: absolute;
@@ -106,3 +113,10 @@ body {
     font-size: 1.25rem;
   }
 }
+
+
+ /* NOTE:
+ Future task(s):
+ • create kenburns effect for background images
+ • create transitions btwn quotes
+ • transition comments from code to readme */
