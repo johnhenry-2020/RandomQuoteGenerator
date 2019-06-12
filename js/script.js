@@ -87,7 +87,7 @@ const getRandomQuote = () => {
   // randomNum variable generates number between 0 & the number
   // of quote objets in quotes array rolling down the overall number
   // eliminating any decimal numbers insuring random number is always an integer vs float
-  const randomNum = Math.floor(Math.random() * quotes.length); \
+  const randomNum = Math.floor(Math.random() * quotes.length);
   //randomQuote variable accesses a random index in quotes array
   const randomQuote = quotes[randomNum];
   return randomQuote;
