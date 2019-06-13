@@ -3,6 +3,7 @@ Project: Random Quote Generator (MAIN LOGIC - VANILLA JAVASCRIPT)
 Author: Jonathan J. Jolivette
 Created: 6.12.19
 Version: 1.1
+THANK YOU FOR YOUR SUPPORT
 * =================================================== */
 
 // quotes element is an array of objects that stores all the key value pairs...
@@ -105,8 +106,12 @@ const printQuote = () => {
   // with the structure and layout given to it via this program's HTML
   printMe += '<p class="quote">' +
     random.quote + '</p>' + '<p class="source">' +
-    random.source + '<span class="citation">' +
-    random.citation + '</span>';
+    random.source + '<span class="citation">';
+  // control flow used here to determine if a quote has a year associate with it...
+  // if a year is associated with the quote than it is displayed on DOM w/ rest of properties
+  if (random.citation) {
+    printMe += '<span class="year">' + random.citation + '</span>'
+  };
   // control flow used here to determine if a quote has a year associate with it...
   // if a year is associated with the quote than it is displayed on DOM w/ rest of properties
   if (random.year) {
