@@ -139,6 +139,21 @@ const printQuote = () => {
   background.style.backgroundImage = "url(" + random.image + ")";
 }
 
+
+// UTILIZATION OF ARROWS TO NAVIGATE QUOTES
+// Right and Left arrow keys trigger transition to new quote mimicing a click on quote button
+//NOTE: The arrow keys don't trigger a keypress event, but they do trigger a keyup or keydown event.
+document.addEventListener('keydown', (e) => {
+  // let key = e.which;
+  if (e.which == 13 || e.which == 39) { // the enter key code or right arrow
+    printQuote();
+    console.log(true);
+  } else if (e.which == 37) { // left arrow
+    printQuote();
+    console.log(false);
+  }
+});
+
 setInterval(function () { printQuote() }, 13000);
 
 
