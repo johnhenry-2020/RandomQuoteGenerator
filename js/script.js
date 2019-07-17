@@ -5,20 +5,34 @@ Created: 6.12.19
 Version: 1.1
 THANK YOU FOR YOUR SUPPORT
 * =================================================== */
-//bdDisplay function --> If the viewport is less than, or equal to, 1400 pixels wide, no longer display the background image
+//bdDisplay function --> If the viewport is greater than, or equal to, 1400 pixels wide, no longer display the background image
 const body = document.querySelector("body");
 function bgDisplay(x) {
-  if (winSize.matches) { // If media query matches
+  if (fullScrn.matches) { // If media query matches
     body.className = "";
   }
   else {
     body.className = "background";
   }
 }
-let winSize = window.matchMedia("(min-width: 1400px)");
+let fullScrn = window.matchMedia("(min-width: 1400px)");
 // Calling function at run time
-bgDisplay(winSize);
-winSize.addListener(bgDisplay); // Attach listener function on state changes
+bgDisplay(fullScrn);
+fullScrn.addListener(bgDisplay); // Attach listener function on state changes
+
+
+// ================================
+
+//bdDisplay function --> If the viewport is less than, or equal to, 1400 pixels wide, encourage users to expand browswer window to full screen
+function smDisplay(x) {
+  if (smallScrn.matches) { // If media query matches
+    alert('Please Increase Window To Full Screen For Best Vewing Experience');
+  }
+}
+let smallScrn = window.matchMedia("(max-width: 1400px)");
+// Calling function at run time
+smDisplay(fullScrn);
+smallScrn.addListener(smDisplay); // Attach listener function on state changes
 
 
 // quotes element is an array of objects that stores all the key value pairs...
