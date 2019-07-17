@@ -5,6 +5,21 @@ Created: 6.12.19
 Version: 1.1
 THANK YOU FOR YOUR SUPPORT
 * =================================================== */
+//bdDisplay function --> If the viewport is less than, or equal to, 1400 pixels wide, no longer display the background image
+const body = document.querySelector("body");
+function bgDisplay(x) {
+  if (winSize.matches) { // If media query matches
+    body.className = "";
+  }
+  else {
+    body.className = "background";
+  }
+}
+let winSize = window.matchMedia("(min-width: 1400px)");
+// Calling function at run time
+bgDisplay(winSize);
+winSize.addListener(bgDisplay); // Attach listener function on state changes
+
 
 // quotes element is an array of objects that stores all the key value pairs...
 // used for inputting data/content onto DOM
@@ -19,7 +34,7 @@ const quotes = [
     citation: "Malcolm X",
     source: "Speech, Prospects for Freedom",
     year: 1965,
-    image: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/malcolm-x-thinks-jovemini-art.jpg",
+    image: "./media/malcolm-x.jpg",
     id: 1
   },
 
@@ -29,7 +44,7 @@ const quotes = [
     citation: "Ralph Ellison",
     source: "Invisible Man",
     year: 1952,
-    image: "https://image.pbs.org/poster_images/assets/Intro_Ellison_still3.png",
+    image: "./media/ellison.jpg",
     id: 2
   },
 
@@ -39,7 +54,7 @@ const quotes = [
     citation: "W.E.B. Du Bois",
     source: "The Souls of Black Folk",
     year: 1903,
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/12/WEB_DuBois_1918.jpg",
+    image: "./media/dubois.jpg",
     id: 3
   },
 
@@ -49,7 +64,7 @@ const quotes = [
     citation: "Maya Angelou",
     source: "The Heart of a Woman",
     year: 1981,
-    image: "https://static1.squarespace.com/static/51734e04e4b08db710716119/5a4b7e6571c10bd7b36d5c7d/5a4b7e6571c10bd7b36d5c90/1510978279747/maya-angelou-she-was-spe-012.jpg",
+    image: "./media/maya.jpg",
     id: 4
   },
 
@@ -59,7 +74,7 @@ const quotes = [
     citation: "Langston Hughes",
     source: "The Negro Artist and the Racial Mountain, The Nation",
     year: 1926,
-    image: "https://www.thevillagecelebration.com/wp-content/uploads/2018/12/headshot-2-1000x600.jpg",
+    image: "./media/langston.jpg",
     id: 5
   },
 
@@ -69,14 +84,14 @@ const quotes = [
     citation: "Malcom X",
     source: "Black Revolution",
     year: 1964,
-    image: "http://www.chrflagship.uwc.ac.za/wp-content/uploads/2018/02/MalcomX3.jpg",
+    image: "./media/x.jpg",
     id: 6
   }, {
     quote:
       "Never forget that intelligence rules the world and ignorance carries the burden. Therefore, remove yourself as far as possible from ignorance and seek as far as possible to be intelligent.",
-    source: "Marcus Garvey Life and Lessons: A Centennial Companion to the Marcus Garvey and Universal Negro Improvement Association Papers",
+    source: "Marcus Garvey Life & Lessons: A Centennial Companion to the Marcus Garvey & Universal Negro Improvement Association Papers",
     year: 1987,
-    image: "https://www.gannett-cdn.com/-mm-/22542986f934bdefd23b322c85cddc0a56e11090/c=0-351-2375-1693/local/-/media/2018/02/14/USATODAY/USATODAY/636542354546909289-Marcus-Garvey-parade-uniform.jpg?width=3200&height=1680&fit=crop",
+    image: "./media/garvey.jpg",
     id: 7
   }
 ];
@@ -124,7 +139,8 @@ const printQuote = () => {
   background.style.backgroundImage = "url(" + random.image + ")";
 }
 
-setInterval(function () { printQuote() }, 15000);
+setInterval(function () { printQuote() }, 13000);
+
 
 // NOTE:
 // Future task(s):
